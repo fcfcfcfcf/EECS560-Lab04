@@ -1,0 +1,25 @@
+ORGANIZATION OF EXPERIMENTAL PROFILING:
+All 3 hash tables were tested with inserting random numbers of size 0.1m -0.5m, and the average was taken after using 5 different seeds.
+All 3 hash tables were tested with finding random numbers of size 0.01m - 0.05m, and the average was taken after using 5 different seeds for found and not found.
+
+
+INPUT DATA GENERATING USING RANDOM NUMBER GENERATOR:
+Input data was used generating the srand function passing in the current time as a parameter, and this number was generated with a new seed for each of the 5 trials.
+
+CPU TIME RECORDING IN C++
+The execution time was calculated by recording the time before and after the given operation, subtracting them from eachother, and then dividing by CLOCKS_PER_SEC to get a value in second
+
+DATA RECORDING AND ANALYSIS
+Data was recorded into an array, and the performance for each hashTable was found for Build, Found, and Not Found for each of the five size (0.1m -0.5m).
+
+PERFORMANCE COMPARISON, OBSERVATIONS, and SUMMARY
+As expected, double hashing and quadratic hashing outperformed open hashing, as they do not use pointers which are highly resource intensive.
+I also noticed that the data was computed in far less time than I thought. I did a project with similar sized data sets in EECS 268 and the execution time was a lot longer.
+I think this was because we were experimenting with sorts rather than hashing, as hashing is a much quicker operation, thus why hashTables are so useful.
+
+CONCLUSION:
+Double Hashing and Quadratic Hashing are more efficient means of hashing, but also require more complicated sorting algorithms as well as lead to issues such as not being able to insert an element into the hashTable, or having to rehash if the table gets too full.
+When determining which Hash Table should be used, concern should be given to how often a closed hash table would have to be rehashed, as well as the amount of information being stored.
+
+
+
